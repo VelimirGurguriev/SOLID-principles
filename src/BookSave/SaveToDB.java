@@ -11,7 +11,7 @@ public class SaveToDB {
     }
 
     public void saveToFile(Book book) {
-        String fileName = "database.txt";
+        String fileName = "src\\BookSave\\database.txt";
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
             oos.writeObject(book);
             System.out.println("Book saved successfully to database.");
