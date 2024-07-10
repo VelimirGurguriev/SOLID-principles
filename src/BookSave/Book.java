@@ -17,6 +17,10 @@ public class Book {
         this.pages = pages;
     }
 
+    public String getBookSummary() {
+        return title + " by " + author + ", has " + pages + " pages and costs: " + price + "BGN.";
+    }
+
     public String getTitle() {
         return title;
     }
