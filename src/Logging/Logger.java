@@ -5,19 +5,21 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 public class Logger {
+    private Loggable logType;
 
-    public Logger() { }
-
-    public void logToConsole(String message) {
-        System.out.println(message);
+    public Logger(Loggable logType) {
+        this.logType = logType;
     }
 
-    public void logToFile(String message, String filename) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))) {
-            oos.writeObject(message);
-            System.out.println("Message successfully logged to file.");
-        } catch (IOException exc) {
-            System.out.println("Error during logging: " + exc);
-        }
+    public void log(String message) {
+        logType.log(message);
+    }
+
+    public Loggable getLogType() {
+        return logType;
+    }
+
+    public void setLogType(Loggable logType) {
+        this.logType = logType;
     }
 }
