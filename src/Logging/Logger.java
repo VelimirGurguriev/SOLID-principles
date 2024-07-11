@@ -1,9 +1,5 @@
 package Logging;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-
 public class Logger {
     private Loggable logType;
 
@@ -31,5 +27,10 @@ public class Logger {
         // test file logging
         logger.setLogType(new FileLog("src\\Logging\\fileLogs.txt"));
         logger.log("Test file log");
+
+        // test database logging
+        Database database = new Database();
+        logger.setLogType(new DatabaseLog(database));
+        logger.log("Test database log");
     }
 }
