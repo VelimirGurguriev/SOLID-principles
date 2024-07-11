@@ -27,5 +27,9 @@ public class Logger {
         // test console logging
         Logger logger = new Logger(new ConsoleLog());
         logger.log("Test console log");
+
+        // test file logging
+        logger.setLogType(new FileLog("src\\Logging\\fileLogs.txt"));
+        logger.log("Test file log");
     }
 }
