@@ -1,6 +1,8 @@
 package Invoices;
 
-public class Invoice {
+import java.io.Serializable;
+
+public class Invoice implements Serializable {
     private double amount;
     private String customerName;
     private String companyName;

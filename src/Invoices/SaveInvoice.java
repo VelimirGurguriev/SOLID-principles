@@ -13,10 +13,10 @@ public class SaveInvoice {
         this.invoice = invoice;
     }
 
-    public void saveToFile(Invoice invoice) {
+    public void saveToFile() {
         String fileName = "src\\Invoices\\invoiceDB.txt";
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
-            oos.writeObject(invoice);
+            oos.writeObject(this.invoice);
             System.out.println("Invoice saved successfully to database.");
         } catch (IOException exc) {
             System.out.println("Error during saving: " + exc);
