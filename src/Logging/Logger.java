@@ -22,4 +22,10 @@ public class Logger {
     public void setLogType(Loggable logType) {
         this.logType = logType;
     }
+
+    public static void main(String[] args) {
+        // test console logging
+        Logger logger = new Logger(new ConsoleLog());
+        logger.log("Test console log");
+    }
 }
