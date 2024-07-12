@@ -21,6 +21,10 @@ public class HybridEngine extends Engine implements Fuelable, Electricable {
         }
     }
 
+    public String getEngineSource() {
+        return engineSource;
+    }
+
     // Methods for the fuel properties of the hybrid engine
     @Override
     public void start() {

@@ -19,5 +19,23 @@ public class Main {
         electricEngine.recharge();
         System.out.println("Engine fuel emissions: " + electricEngine.hasFuelEmissions());
         System.out.println("----------------------------");
+
+        // testing hybrid engine implementation
+        HybridEngine hybridEngine = new HybridEngine(450, 150,
+                "BMW", "fuel");
+        System.out.println("Engine source: " + hybridEngine.getEngineSource());
+        hybridEngine.start();
+        hybridEngine.stop();
+        hybridEngine.refuel();
+        hybridEngine.changeOil();
+        hybridEngine.changeSparkPlugs();
+        // testing electric properties
+        hybridEngine.switchSource();
+        System.out.println("Engine source: " + hybridEngine.getEngineSource());
+        hybridEngine.turnOn();
+        hybridEngine.turnOff();
+        hybridEngine.recharge();
+        System.out.println("Engine fuel emissions: " + hybridEngine.hasFuelEmissions());
+        System.out.println("----------------------------");
     }
 }
