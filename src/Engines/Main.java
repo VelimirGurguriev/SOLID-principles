@@ -7,9 +7,17 @@ public class Main {
         fuelEngine.start();
         fuelEngine.stop();
         fuelEngine.refuel();
+        System.out.println("Engine fuel emissions: " + fuelEngine.hasFuelEmissions());
         fuelEngine.changeOil();
-        fuelEngine.hasFuelEmissions();
         fuelEngine.changeSparkPlugs();
+        System.out.println("----------------------------");
+
+        // testing electric engine implementation
+        ElectricEngine electricEngine = new ElectricEngine(250, 150, "Tesla");
+        electricEngine.turnOn();
+        electricEngine.turnOff();
+        electricEngine.recharge();
+        System.out.println("Engine fuel emissions: " + electricEngine.hasFuelEmissions());
         System.out.println("----------------------------");
     }
 }
