@@ -12,6 +12,10 @@ public enum DiscountType {
         this.percentage = percentage;
     }
 
+    public double calculateDiscount(double price) {
+        return price - (price * percentage);
+    }
+
     public double getPercentage() {
         return percentage;
     }
