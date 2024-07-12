@@ -2,7 +2,7 @@ package Engines;
 
 public interface Fuelable {
     void start();
-    boolean hasFuelEmissions();
+    void stop();
     void changeOil();
     void refuel();
     void changeSparkPlugs();
