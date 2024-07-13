@@ -1,8 +1,8 @@
 package SensorTemperature;
 
-public class TemperatureSensor implements TemperatureSensorable {
+public class TemperatureSensor implements Sensorable {
     @Override
     public double getTemperature() {
-        return 0;
+        return 25;
     }
 }

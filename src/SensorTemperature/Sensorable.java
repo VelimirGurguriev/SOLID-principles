@@ -1,5 +1,5 @@
 package SensorTemperature;
 
-public interface TemperatureSensorable {
+public interface Sensorable {
     double getTemperature();
 }
